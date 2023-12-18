@@ -22,5 +22,6 @@ def accept(request):
             is_active=form.cleaned_data['is_active']
         )
         user.save()
+        return HttpResponse('Success')
     else:
         return HttpResponse('Error')
